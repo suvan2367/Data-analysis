@@ -1,0 +1,28 @@
+﻿SUMMARY OF THE CLEANING PROCESS
+
+
+* The raw dataset named “Mall_Customers.csv” is loaded into a dataframe using pd.read_csv(), which creates a structured table for further cleaning.
+
+
+* The column headers are cleaned and standardized by stripping extra spaces, converting all names to lowercase, and replacing spaces with underscores to ensure consistency and easier access.
+
+
+* Missing values in the ‘age’ column are handled by replacing them with the median age of the column. This is a common technique that avoids skewing the data too much.
+
+
+* Duplicate rows are removed from the dataset using drop_duplicates(), which keeps only the first occurrence of each duplicate entry.
+
+
+* The gender column values are standardized by converting all text to lowercase and stripping extra spaces. Then, common variations like 'f', 'fem', and 'female' are mapped to 'Female', and 'm', 'mal', and 'male' are mapped to 'Male'.
+
+
+* The doi (Date of Issue) column is converted to datetime format using pd.to_datetime() with dayfirst=True, ensuring the day comes before the month. Invalid date formats are coerced into null values (NaT).
+
+
+* The formatted doi column is then converted to a uniform string format using strftime('%d-%m-%Y'), so that all dates appear in the dd-mm-yyyy format.
+
+
+* The age column is explicitly converted to integer type using astype('int', errors='ignore') to ensure that all values are stored as whole numbers where possible, while any invalid entries are left untouched.
+
+
+* Finally, the cleaned dataset is exported to a new CSV file named cleaned_dataset.csv, with the index excluded, using to_csv(). This file contains the cleaned and standardized version of the original dataset.

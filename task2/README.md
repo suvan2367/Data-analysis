@@ -1,0 +1,1 @@
+Here, I have taken the dataset (train.csv) from Kaggle. The dataset was then loaded onto PowerBI software. Then visuals were used for a better representation of the dataset. The screenshot of the dashboard has been attached in the task_2.pdf file along with the exlanation of the dashboard.
